@@ -147,7 +147,7 @@ protected:
 
     ServiceClientPtr service_client;
     rclcpp::CallbackGroup::SharedPtr callback_group;
-    rclcpp::executors::SingleThreadedExecutor callback_executor;
+    rclcpp::experimental::executors::EventsExecutor callback_executor;
   };
 
   static std::mutex& getMutex()
