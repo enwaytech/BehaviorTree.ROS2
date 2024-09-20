@@ -108,7 +108,7 @@ protected:
 private:
   ServicePtr service_;
   rclcpp::CallbackGroup::SharedPtr callback_group_;
-  rclcpp::executors::SingleThreadedExecutor callback_executor_;
+  rclcpp::experimental::executors::EventsExecutor callback_executor_;
 
   bool createService(const std::string& service_name);
 };

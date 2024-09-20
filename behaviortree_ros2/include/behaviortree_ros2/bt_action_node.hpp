@@ -178,7 +178,7 @@ protected:
 
     ActionClientPtr action_client;
     rclcpp::CallbackGroup::SharedPtr callback_group;
-    rclcpp::executors::SingleThreadedExecutor callback_executor;
+    rclcpp::experimental::executors::EventsExecutor callback_executor;
     typename ActionClient::SendGoalOptions goal_options;
   };
 

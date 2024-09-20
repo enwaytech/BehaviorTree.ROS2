@@ -55,7 +55,7 @@ protected:
 
     std::shared_ptr<Subscriber> subscriber;
     rclcpp::CallbackGroup::SharedPtr callback_group;
-    rclcpp::executors::SingleThreadedExecutor callback_group_executor;
+    rclcpp::experimental::executors::EventsExecutor callback_group_executor;
     boost::signals2::signal<void(const std::shared_ptr<TopicT>)> broadcaster;
     std::shared_ptr<TopicT> last_msg;
   };
